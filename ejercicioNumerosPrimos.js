@@ -20,7 +20,7 @@ function getNumerosPrimos(num) {
   console.log(primos);
 }
 
-getNumerosPrimos(109);
+getNumerosPrimos(75);
 
 
 
