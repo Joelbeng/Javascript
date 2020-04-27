@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#form-box {
+  width:35%;
+  height:70vh;
+  position: relative;
+  top:30px;
+  margin:0 auto;
+  background-color: rgba(189, 189, 189, 0.28);
+  border-radius:20px;
+  border:solid #000 1px;
+  padding:30px 0;
+}
+
+h1 {
+  margin-bottom:1.5em;
+}
+
+#name {
+  display: block;
+  margin:20px auto;
+  padding:7px 5px;
+}
+
+button {
+padding:2px 10px;
+}

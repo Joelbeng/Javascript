@@ -17,7 +17,7 @@ function getNumerosPrimos(num) {
           } 
       }
     }
-  console.log(primos);
+  return 'Los números son primos';
 }
 
 getNumerosPrimos(75);
