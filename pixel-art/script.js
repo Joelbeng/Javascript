@@ -4,7 +4,6 @@ window.addEventListener("load", function () {
     const colCount = document.getElementById("columnInput");
     const cellSize = document.getElementById("input-size");
     const containerDiv = document.querySelector(".grid-container");
-    // DUDA, const containerDiv = document.getElementsByClassName("grid-container"); ¿Por qué no me lo deja tomar así?
     const btnReset = document.getElementById("reset");
     const btnBackColor = document.getElementById("backColorInput");
     const btnColor = document.getElementById("colorInput");
@@ -43,6 +42,9 @@ window.addEventListener("load", function () {
                 newDiv.addEventListener('mouseover',function() {
                     this.style.backgroundColor = btnBackColor.value;
                 });
+                newDiv.addEventListener('click',function() {
+                    this.style.backgroundColor = "";
+                });
                                
             });        
         }
@@ -63,15 +65,7 @@ window.addEventListener("load", function () {
 
             cell.style.width = `${this.value}px`;
             cell.style.height = `${this.value}px`; 
-        } 
-            
-           /* //DUDA Si comento el for y descomento esto, ¿Por qué no anda?   
-             
-                cellArray.forEach(function(cell) {
-                cell.style.width = `${this.value}px`;
-                cell.style.height = `${this.value}px`;   
-                }); */
-                        //                    
+        }                    
     });
 
     //Cambia el fondo del contenedor de la grilla
