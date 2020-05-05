@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
                 if(getComputedStyle.opacity !== 1) this.style.opacity = "1";
                 btnDraw.style.opacity = "0.5";                            
                 
-                newDiv.addEventListener('click',function() {
+                newDiv.addEventListener('mouseover',function() {
                     this.style.backgroundColor = btnBackColor.value;
                 });
                                
