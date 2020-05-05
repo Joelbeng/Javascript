@@ -2,7 +2,7 @@ const validatebtn = document.getElementById('validate');
 const formatebtn = document.getElementById('formate');
 const nameInput = document.getElementById('name');
 const nameOutput = document.querySelector('p');
-
+let flag = false;
 /**
  * Evalúa que exista una única coma, y ejecuta la función checkWords() si se cumple. 
  @returns {boolean}
@@ -10,9 +10,15 @@ const nameOutput = document.querySelector('p');
 function getValidation() {
     if ((nameInput.value.indexOf(",") >= 0) &&
         (nameInput.value.indexOf(",") === nameInput.value.lastIndexOf(","))) {
-        return checkWords();
+        splitWords(function (name,lastName) {
+            if (name.length >= 2 && lastName.length >= 3) {
+                flag = true;
+            } else {
+                flag ;
+            }
+        });
     } else {
-        return false;
+        flag ;
     }
 }
 
@@ -21,23 +27,18 @@ function getValidation() {
  * Esta función es ejecutada por getValidation().
  @returns {boolean}
  */
-function checkWords() {
-    let firstPart = nameInput.value.slice(0, nameInput.value.indexOf(","));
-    let secondPart = nameInput.value.slice(nameInput.value.indexOf(",") + 1, nameInput.value.length);
 
-    if (firstPart.length >= 2 && secondPart.length >= 3) {
-        return true;
-    } else {
-        return false;
-    }
+function splitWords(callback){
+    let name = nameInput.value.slice(0, nameInput.value.indexOf(","));
+    let lastName = nameInput.value.slice(nameInput.value.indexOf(",") + 1, nameInput.value.length);
+    callback(name,lastName);
 }
 
 // Al hacer click en el botón "Validar" cambia el color de los bordes del input, dependiendo de la validación.
 
-validatebtn.addEventListener('click', () => {
-    let validate = getValidation();
+validatebtn.addEventListener('click', () => { 
 
-    if (validate) {
+    if (flag=== true) {
         nameInput.style.border = "2px solid green";
     } else {
         nameInput.style.border = "2px solid red";

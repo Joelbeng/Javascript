@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="settings">
+            <label for="rowInput">Filas</label>
+            <input type="number" name="row" id="rowInput" value="20">
+            <label for="columnInput">Columnas</label>
+            <input type="number" name="column" id="columnInput" value="20">
+            <label for="input-size">Tamaño</label>
+            <input type="number" name="column" id="input-size" value="20">           
+            <button id="reset">Reiniciar</button>
+            <label for ="checkbox">Ver Bordes</label>
+            <input type="checkbox" id="checkbox" checked>
+        </div>
+        <div id="toolbar">    
+            <label for="backColorInput" class="color">Fondo</label>
+            <input type="color" id="backColorInput" value="#ffffff">
+            <label for="colorInput" class="color">Color</label>
+            <input type="color" id="colorInput">
+            <img src="img/pencil.png" alt="lápiz" id="pencil">
+            <img src="img/eraser.png" alt="goma" id="eraser">
+        </div>
+        <section>
+            <div class="grid-container">         
+            </div>
+        </section>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
