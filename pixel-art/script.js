@@ -9,7 +9,7 @@ const btnErase = document.getElementById("eraser");
 let paint = true; 
 
 // Una vez que finalice de cargar el DOM, se ejecuta el siguiente bloque de código (la callback function).
-window.addEventListener("load", function () {
+
     const rowCount = document.getElementById("rowInput");
     const colCount = document.getElementById("columnInput");
     const cellSize = document.getElementById("input-size");
@@ -109,4 +109,3 @@ window.addEventListener("load", function () {
             }
         }    
     });
-});
