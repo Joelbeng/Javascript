@@ -1,28 +1,40 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 
-body{
+body {
+    min-height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     max-width: 1290px;
     margin:0 auto;
     text-align: center;
-    background:url('https://images.cdn2.stockunlimited.net/preview1300/land-space-and-telescope-wallpaper_1703388.jpg'),linear-gradient(180deg,#000,#f11);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background:linear-gradient(180deg,rgb(24, 0, 70),rgb(75, 0, 112));
     color:#fff;
 }
 
 h1 {
-    margin:1em 0;
+    padding:1em 0;
 }
 
 button {
-    color 
+    position:relative;
+    padding:8px 16px;
+    cursor:pointer;
+    color:#Fff;
+    background-color: rgb(201, 125, 125);
+    border:none;
+    transition: opacity 0.4s;
+    border-radius: 3px;
 }
 
 img {
     max-width:100%;
-    height: 100vh;
+    height: 80vh;
+}
+
+p.description {
+    text-align: left;
+    line-height: 1.5; 
 }

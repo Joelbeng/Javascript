@@ -1,0 +1,7 @@
+1- poder acceder a los colores usados antes.
+
+2- cuando se apriete reiniciar y el checkbox esté destildado, vuelva a tildarse solo.
+
+3- si se borra con un color y luego se le cambia el color de fondo, los que se borraron tienen otro color. Seleccionar esos que borre y ponerle el nuevo color de fondo.
+
+4- cambiar el cursor cuando se dibuja por un lapiz y un borrador cuando se borra
